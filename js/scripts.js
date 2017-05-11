@@ -2,7 +2,6 @@ var addressBook = {
 entries: [],
 };
 
-
 function Entry(firstName, lastName, email, number) {
   this.firstName = firstName;
   this.lastName = lastName;
@@ -10,8 +9,11 @@ function Entry(firstName, lastName, email, number) {
   this.number = number;
 }
 
-Entry.prototype.enter = function(entry) {
-  addressBook.entries[].append(newEntry);
+Entry.prototype.enter = function(newEntry) {
+
+  addressBook.entries.push(newEntry);
+  console.log(addressBook.entries);
+  console.log(addressBook.entries[0]);
 
 }
 
@@ -28,8 +30,9 @@ $(document).ready(function() {
   var newEntry = new Entry(entryFirst, entryLast, entryEmail, entryNumber);
 
   newEntry.enter(newEntry);
+  alert(newEntry);
 
-  console.log(addressBook.entries);
+
 
   });
 });
